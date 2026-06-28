@@ -1,41 +1,45 @@
 # MAR STINKT 🦨 — Amtliches Gestank-Portal der Stadt Ravensburg
 
-Eine humorvolle Scherz-Website, um einen guten Freund (Mar) liebevoll aufzuziehen.
-Die Seite tut so, als wäre sie ein offizielles Behörden-Portal der Stadt Ravensburg,
-das amtlich bestätigt: **Mar stinkt.**
+Ein aufwändig gestaltetes Portal, das auftritt wie ein offizielles Behörden-Angebot
+der Stadt Ravensburg — und amtlich bestätigt: **Mar stinkt.**
 
 ## Features
 
-- 🏛️ **Behörden-Optik** — professionell wirkendes Design mit Wappen, Aktenzeichen und Amtssiegel
-- 📈 **Animiertes Stink-O-Meter™** — eine Messnadel, die den „Gestankspegel" live auf 9,7 GES hochzählt
+- 🏛️ **Behörden-Optik** — echtes Ravensburg-Stadtwappen, Aktenzeichen und Amtssiegel
+- 📈 **Animiertes Stink-O-Meter™** — Messnadel, die den „Gestankspegel" live auf 9,7 GES hochzählt
+- 🧪 **Geruchs-Steckbrief & Vergleich** — Datenblatt + animierte Vergleichsbalken (Mar vs. Mülltonne, Fischmarkt …)
+- 🗺️ **Sperrzonen-Karte** — schematischer Lageplan mit Evakuierungs-Radius rund um Mar
+- 🕒 **Chronik des Gestanks** — Zeitstrahl der „dokumentierten Vorfälle"
 - 📜 **Amtliches Gestank-Zertifikat** — seriöse Urkunde mit Zierrahmen, Siegel und Unterschriften
-- 🖨️ **Druck-/PDF-Funktion** — das Zertifikat lässt sich sauber auf A4 ausdrucken oder als PDF speichern
-- 💬 **Scrollende Fake-Kommentare** — absurde „verifizierte Geruchszeugnisse" mit Sternebewertung
+- 🖨️ **Druck-/PDF-Funktion** — das Zertifikat passt im Druck **genau auf eine A4-Seite**
+- ✍️ **Petition mit Live-Zähler** — Unterschriften werden im Browser (localStorage) gezählt
+- 📰 **Schlagzeilen-Ticker & Pressestimmen** — durchlaufende Fake-Meldungen
+- 💬 **Scrollende Geruchszeugnisse** — absurde „verifizierte" Bewertungen mit Sternen
+- ❓ **Amtliche FAQ** — Akkordeon mit seriös klingenden Antworten
 - 📱 **Voll mobil-tauglich** — Mobile-First, läuft einwandfrei auf dem Smartphone
 
 ## Benutzung
 
-Es gibt nichts zu installieren und keine Abhängigkeiten — alles steckt in einer
-einzigen Datei.
+Keine Installation, keine Build-Tools.
 
 ```
 index.html im Browser öffnen (Doppelklick reicht)
 ```
 
-Zertifikat ausdrucken oder als PDF speichern: Button **„Zertifikat drucken / als PDF
+Zertifikat ausdrucken / als PDF speichern: Button **„Zertifikat drucken / als PDF
 speichern"** klicken → im Druckdialog „Als PDF speichern" wählen. Im Druck erscheint
-nur das Zertifikat sauber auf einer A4-Seite.
+nur das Zertifikat, seitenfüllend auf einer A4-Seite.
+
+## Dateien
+
+- `index.html` — komplette Seite (HTML + CSS + Vanilla-JS inline)
+- `Wappen_Ravensburg.svg.png` — das Stadtwappen; wird von `index.html` direkt
+  referenziert und muss daher **im selben Ordner** neben `index.html` liegen
 
 ## Technik
 
-- Eine einzelne, selbst-enthaltene `index.html` (HTML + CSS + Vanilla-JS inline)
-- Keine Build-Tools, keine externen Skripte — funktioniert offline
-- Wappen und Siegel sind Inline-SVG
-- Schriften von Google Fonts mit System-Font-Fallback
-
-## Hinweis
-
-Das ist **Satire** und ein Scherz unter Freunden. Es gibt kein echtes „Amt für
-Geruchsangelegenheiten", kein amtliches Gestank-Zertifikat und keine echte Sperrzone.
-Die Stadt Ravensburg hat damit nichts zu tun. Mar riecht in Wahrheit vermutlich völlig
-in Ordnung. 😎
+- HTML + CSS + Vanilla-JS, keine externen Skripte/Frameworks
+- Animationen über `IntersectionObserver` (Reveal, Zähler, Stink-O-Meter, Balken)
+- Petitions-Zähler persistiert in `localStorage`
+- Amtssiegel als Inline-SVG; Stadtwappen als referenziertes PNG
+- Schriften von Google Fonts mit System-Font-Fallback (funktioniert auch offline)
